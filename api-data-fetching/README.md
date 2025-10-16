@@ -1,6 +1,6 @@
-# API Data Fetching Showcase
+# API Data Fetching
 
-This project is a Next.js application designed to demonstrate various methods of fetching and displaying data from public APIs. It includes examples of data tables with pagination and sorting, as well as data visualization with charts.
+This project is a Next.js application designed to demonstrate various methods of fetching and displaying data from public APIs. It includes examples of data listing with pagination and sorting, as well as data visualization with charts.
 
 ## Overview
 

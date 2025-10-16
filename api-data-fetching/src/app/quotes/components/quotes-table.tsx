@@ -53,7 +53,7 @@ export const QuotesTable: FC<QuotesTableProps> = ({
           : data.map((quote, index) => (
               <Card key={index} className="justify-between">
                 <CardContent className="h-full flex flex-col justify-between gap-6">
-                  <p>{quote.content}</p>
+                  <p className="text-sm">{quote.content}</p>
 
                   <div className="flex flex-wrap items-center gap-2">
                     {quote.tags.map((tag, idx) => (

@@ -8,6 +8,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useGetCovidStatsQuery } from "@/redux/api/covid-stats";
+import { DateTime } from "luxon";
 import { useCallback, useState } from "react";
 import { CovidChart } from "./components/covid-chart";
 
@@ -17,8 +18,10 @@ const formatDate = (dateInt: number) => {
   const year = dateStr.substring(0, 4);
   const month = dateStr.substring(4, 6);
   const day = dateStr.substring(6, 8);
-  // Using MM/DD format for readability on the chart axis
-  return `${month}/${day}`;
+
+  const formattedDate = DateTime.fromFormat(dateStr, "yyyyMMdd");
+  // Using DD/MM format for readability on the chart axis
+  return formattedDate.toLocaleString(DateTime.DATE_MED);
 };
 
 export default function CovidStatsPage() {
@@ -53,11 +56,16 @@ export default function CovidStatsPage() {
       }))
       .reverse();
   }, [limitedData]);
+  console.log("Processed Data:", processedData());
 
   return (
     <div className="container mx-auto p-4 space-y-8">
-      <div className="relative">
-        <h1 className="text-3xl font-bold mb-4">Covid Stats Page</h1>
+      <div className="relative space-y-2">
+        <h1 className="text-xl font-bold">Covid Stats Page</h1>
+
+        <p className="text-sm">
+          Covid statistics for the selected time range (US).
+        </p>
 
         <Select
           value={String(timeRange)}

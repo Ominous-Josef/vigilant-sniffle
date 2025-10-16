@@ -34,9 +34,9 @@ export const CovidChart = ({ data, isLoading }: CovidChartProps) => {
       <ResponsiveContainer width="100%" height={400}>
         <LineChart
           data={data}
-          margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
+          margin={{ top: 20, right: 20, left: 20, bottom: 10 }}
         >
-          <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
+          <CartesianGrid strokeDasharray="1 1" stroke="#e0e0e0" />
 
           <XAxis
             dataKey="name"
@@ -59,7 +59,7 @@ export const CovidChart = ({ data, isLoading }: CovidChartProps) => {
               angle: -90,
               position: "insideLeft",
               fill: "#1f2937",
-              style: { textAnchor: "middle" },
+              style: { textAnchor: "middle", display: "none"},
             }}
           />
 
@@ -74,12 +74,12 @@ export const CovidChart = ({ data, isLoading }: CovidChartProps) => {
               angle: 90,
               position: "insideRight",
               fill: "#1f2937",
-              style: { textAnchor: "middle" },
+              style: { textAnchor: "middle", display: "none" },
             }}
           />
 
           <Tooltip content={<CustomChartTooltip />} />
-          <Legend wrapperStyle={{ paddingTop: "20px" }} />
+          <Legend wrapperStyle={{ paddingTop: "50px" }} />
 
           {/* Line 1: New Positive Cases (Left Axis) */}
           <Line

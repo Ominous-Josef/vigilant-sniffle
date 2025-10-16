@@ -30,7 +30,7 @@ export default function QuotesPage() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">Quotes Page</h1>
+      <h1 className="text-xl font-bold mb-4">Quotes Page</h1>
 
       <div className="space-y-6 w-full">
         <QuotesTable data={quotes} loading={isLoading || isFetching} />
