@@ -6,8 +6,8 @@ This project is a Next.js application designed to demonstrate various methods of
 
 The application is structured into different pages, each showcasing a unique dataset:
 
--   **Random Users**: Displays a table of randomly generated user data with pagination.
--   **Quotes**: Shows a collection of quotes in a simple table.
+-   **Random Users**: Displays a randomly generated user data.
+-   **Quotes**: Shows a collection of quotes with pagination.
 -   **COVID-19 Stats**: Visualizes historical COVID-19 data for the US using a line chart, with options to select different time ranges.
 
 The project is built with a modern tech stack, emphasizing best practices for code organization, state management, and UI development.
