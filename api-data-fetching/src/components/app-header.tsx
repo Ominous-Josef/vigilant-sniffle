@@ -6,13 +6,15 @@ import { SidebarTrigger } from "./ui/sidebar";
 
 export const AppHeader = () => {
   return (
-    <header className="w-full">
+    <header className="w-full border-b border-gray-200 bg-white">
       <div className="container mx-auto p-4 flex items-center justify-between gap-6">
         <SidebarTrigger />
         <h1 className="text-lg font-bold">API Data Fetching</h1>
 
         <Link
-          href={"https://github.com/Ominous-Josef/"}
+          href={
+            "https://github.com/Ominous-Josef/vigilant-sniffle/blob/e766d15be8eba9c4ec2fb76425082d97023a0b29/api-data-fetching/README.md"
+          }
           target="_blank"
           className="bg-black p-2 rounded-full"
         >
