@@ -13,7 +13,7 @@ export const AppHeader = () => {
 
         <Link
           href={
-            "https://github.com/Ominous-Josef/vigilant-sniffle/blob/e766d15be8eba9c4ec2fb76425082d97023a0b29/api-data-fetching/README.md"
+            "https://github.com/Ominous-Josef/vigilant-sniffle/blob/main/api-data-fetching/README.md"
           }
           target="_blank"
           className="bg-black p-2 rounded-full"
