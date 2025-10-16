@@ -79,8 +79,6 @@ export default function CovidStatsPage() {
             <SelectItem value="60">Last 60 Days</SelectItem>
             <SelectItem value="90">Last 90 Days</SelectItem>
             <SelectItem value="120">Last 120 Days</SelectItem>
-            <SelectItem value="180">Last 180 Days</SelectItem>
-            <SelectItem value="365">Last 365 Days</SelectItem>
           </SelectContent>
         </Select>
       </div>

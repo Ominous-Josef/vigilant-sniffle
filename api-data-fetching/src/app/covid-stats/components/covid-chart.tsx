@@ -31,7 +31,7 @@ interface CovidChartProps {
 export const CovidChart = ({ data, isLoading }: CovidChartProps) => {
   return (
     <div>
-      <ResponsiveContainer width="100%" height={400}>
+      <ResponsiveContainer width="100%" height={500}>
         <LineChart
           data={data}
           margin={{ top: 20, right: 20, left: 20, bottom: 10 }}
