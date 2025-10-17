@@ -2,17 +2,13 @@
 
 Welcome to the `vigilant-sniffle` repository, a collection of front-end projects developed to showcase various web technologies and best practices. This repository is structured as a monorepo containing three distinct applications.
 
-## Author
-
-This project is maintained by **Ominous-Josef**.
-
 ## Folder Structure
 
 The repository is organized into the following sub-projects:
 
 ```
 vigilant-sniffle/
-├── api-data-fetching/   # Next.js application for API data fetching and visualization
+├||── api-data-fetching/   # Next.js application for API data fetching and visualization
 ├── shopping-cart-js/    # React shopping cart application (JavaScript)
 └── shopping-cart-ts/    # React shopping cart application (TypeScript)
 ```
@@ -25,17 +21,17 @@ A Next.js application designed to demonstrate various methods of fetching and di
 
 ### Key Features
 
--   **Random Users**: Displays a table of randomly generated user data with pagination.
--   **Quotes**: Shows a collection of quotes in a simple table.
--   **COVID-19 Stats**: Visualizes historical COVID-19 data for the US using a line chart.
+- **Random Users**: Displays a table of randomly generated user data with pagination.
+- **Quotes**: Shows a collection of quotes in a simple table.
+- **COVID-19 Stats**: Visualizes historical COVID-19 data for the US using a line chart.
 
 ### Tech Stack
 
--   **Framework**: Next.js
--   **Styling**: Tailwind CSS, shadcn/ui
--   **State Management & Data Fetching**: Redux Toolkit (RTK Query), Axios
--   **Data Visualization**: Recharts
--   **Tables**: TanStack Table
+- **Framework**: Next.js
+- **Styling**: Tailwind CSS, shadcn/ui
+- **State Management & Data Fetching**: Redux Toolkit (RTK Query), Axios
+- **Data Visualization**: Recharts
+- **Tables**: TanStack Table
 
 ### Getting Started
 
@@ -44,6 +40,7 @@ cd api-data-fetching
 npm install
 npm run dev
 ```
+
 The application will be available at `http://localhost:3000`.
 
 ---
@@ -54,11 +51,11 @@ A modern shopping cart application built with React and JavaScript. It serves as
 
 ### Tech Stack
 
--   **Library**: React
--   **Build Tool**: Vite
--   **Routing**: React Router
--   **State Management**: Redux Toolkit, React Redux, Redux Persist
--   **Styling**: Tailwind CSS
+- **Library**: React
+- **Build Tool**: Vite
+- **Routing**: React Router
+- **State Management**: Redux Toolkit, React Redux, Redux Persist
+- **Styling**: Tailwind CSS
 
 ### Getting Started
 
@@ -67,6 +64,7 @@ cd shopping-cart-js
 npm install
 npm run dev
 ```
+
 The application will be available at `http://localhost:5173`.
 
 ---
@@ -77,12 +75,12 @@ A type-safe version of the shopping cart application, built with React and TypeS
 
 ### Tech Stack
 
--   **Library**: React
--   **Language**: TypeScript
--   **Build Tool**: Vite
--   **Routing**: React Router
--   **State Management**: Redux Toolkit, React Redux, Redux Persist
--   **Styling**: Tailwind CSS
+- **Library**: React
+- **Language**: TypeScript
+- **Build Tool**: Vite
+- **Routing**: React Router
+- **State Management**: Redux Toolkit, React Redux, Redux Persist
+- **Styling**: Tailwind CSS
 
 ### Getting Started
 
@@ -91,4 +89,9 @@ cd shopping-cart-ts
 npm install
 npm run dev
 ```
+
 The application will be available at `http://localhost:5173`.
+
+## Author
+
+This project is maintained by [**Joseph Ohwonohwo**](https://github.com/Ominous-Josef).
