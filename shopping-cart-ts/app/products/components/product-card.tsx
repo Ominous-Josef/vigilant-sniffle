@@ -2,6 +2,7 @@
 
 import { MinusIcon, PlusIcon } from "lucide-react";
 import { useCallback, useMemo, type FC } from "react";
+import { toast } from "sonner";
 import type { IProduct } from "~/lib/interface";
 import { useAppDispatch, useAppSelector } from "~/redux/hooks";
 import { updateCart } from "~/redux/slice/cart.slice";
@@ -27,6 +28,7 @@ export const ProductCard: FC<{ product: IProduct }> = ({ product }) => {
         quantity: 1,
       })
     );
+	toast.success("Product added to cart");
     return;
   }, [product, dispatch]);
 
@@ -68,7 +70,7 @@ export const ProductCard: FC<{ product: IProduct }> = ({ product }) => {
           {cartItem ? (
             <div className="inline-flex items-center rounded-lg bg-transparent border py-1 px-2 border-blue-500">
               <span
-                className="inline-block cursor-pointer rounded-md text-white p-1 bg-blue-500"
+                className="inline-block cursor-pointer select-none rounded-md text-white p-1 bg-blue-500"
                 onClick={() => handleUpdateCart(false)}
               >
                 <MinusIcon size={14} />
@@ -77,7 +79,7 @@ export const ProductCard: FC<{ product: IProduct }> = ({ product }) => {
                 {cartItem.quantity}
               </span>
               <span
-                className="inline-block cursor-pointer rounded-md text-white p-1 bg-blue-500"
+                className="inline-block cursor-pointer select-none rounded-md text-white p-1 bg-blue-500"
                 onClick={() => handleUpdateCart(true)}
               >
                 <PlusIcon size={14} />

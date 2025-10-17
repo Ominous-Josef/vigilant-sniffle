@@ -43,8 +43,12 @@ const cartSlice = createSlice({
       state.items = items;
       state.totalPrice = sumField(state.items, "price", "quantity");
     },
+    clearCart: (state) => {
+      state.items = [];
+      state.totalPrice = 0;
+    },
   },
 });
 
-export const { updateCart } = cartSlice.actions;
+export const { updateCart, clearCart } = cartSlice.actions;
 export const cartReducer = cartSlice.reducer;

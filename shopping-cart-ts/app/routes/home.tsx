@@ -1,7 +1,10 @@
-import type { MetaArgs } from "react-router";
-import { CartApp } from "~/cart-app";
+import { redirect, type LoaderFunctionArgs } from "react-router";
 
-export function meta({}: MetaArgs) {
+export async function loader({ request }: LoaderFunctionArgs) {
+  return redirect("/products");
+}
+
+export function meta() {
   return [
     { title: "New React Router App" },
     { name: "description", content: "Welcome to React Router!" },
@@ -9,5 +12,5 @@ export function meta({}: MetaArgs) {
 }
 
 export default function Home() {
-  return <CartApp />;
+  return null; // No UI since we’re redirecting
 }

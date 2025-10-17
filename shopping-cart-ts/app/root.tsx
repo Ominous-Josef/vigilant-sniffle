@@ -7,6 +7,7 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import { Toaster } from "sonner";
 import type { Route } from "./+types/root";
 import "./app.css";
 import { AppHeader } from "./components/app-header";
@@ -53,6 +54,7 @@ export default function App() {
       <main>
         <AppHeader />
         <Outlet />
+        <Toaster />
       </main>
     </ReduxProvider>
   );
