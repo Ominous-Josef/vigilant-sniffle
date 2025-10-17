@@ -17,12 +17,12 @@ vigilant-sniffle/
 
 ## 1. [API Data Fetching Showcase](https://github.com/Ominous-Josef/vigilant-sniffle/blob/main/api-data-fetching/README.md)
 
-A Next.js application designed to demonstrate various methods of fetching and displaying data from public APIs. It includes examples of data tables with pagination and sorting, as well as data visualization with charts.
+A Next.js application designed to demonstrate various methods of fetching and displaying data from public APIs. It includes examples of data collection with pagination and sorting, as well as data visualization with charts.
 
 ### Key Features
 
-- **Random Users**: Displays a table of randomly generated user data with pagination.
-- **Quotes**: Shows a collection of quotes in a simple table.
+- **Random User**: Displays a randomly generated user data .
+- **Quotes**: Shows a collection of quotes with pagination.
 - **COVID-19 Stats**: Visualizes historical COVID-19 data for the US using a line chart.
 
 ### Tech Stack
