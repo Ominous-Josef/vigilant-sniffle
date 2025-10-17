@@ -8,7 +8,7 @@ The repository is organized into the following sub-projects:
 
 ```
 vigilant-sniffle/
-├||── api-data-fetching/   # Next.js application for API data fetching and visualization
+├── api-data-fetching/   # Next.js application for API data fetching and visualization
 ├── shopping-cart-js/    # React shopping cart application (JavaScript)
 └── shopping-cart-ts/    # React shopping cart application (TypeScript)
 ```
