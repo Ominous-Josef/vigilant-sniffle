@@ -1,12 +1,18 @@
-import { Welcome } from "../welcome/welcome";
+import { redirect } from "react-router";
+
+export async function loader({ request }) {
+  return redirect("/products");
+}
 
 export function meta() {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "ShopTat" },
+    { name: "description", content: "Welcome to ShopTat!" },
   ];
 }
 
+
+
 export default function Home() {
-  return <Welcome />;
+  return null;
 }

@@ -6,11 +6,11 @@ export async function loader({ request }: LoaderFunctionArgs) {
 
 export function meta() {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "ShopTat" },
+    { name: "description", content: "Welcome to ShopTat!" },
   ];
 }
 
 export default function Home() {
-  return null; // No UI since we’re redirecting
+  return null; 
 }

@@ -56,7 +56,6 @@ export default function CovidStatsPage() {
       }))
       .reverse();
   }, [limitedData]);
-  console.log("Processed Data:", processedData());
 
   return (
     <div className="container mx-auto p-4 space-y-8">

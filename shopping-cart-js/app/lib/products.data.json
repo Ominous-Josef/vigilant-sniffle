@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Bluetooth Headphones",
+    "price": 59.99,
+    "description": "Comfortable over-ear wireless headphones with noise-canceling feature and 30-hour battery life.",
+    "category": "Electronics",
+    "image": "/images/headphones.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Stainless Steel Water Bottle",
+    "price": 19.95,
+    "description": "Insulated, leak-proof water bottle that keeps drinks cold for 24 hours or hot for 12 hours.",
+    "category": "Home & Kitchen",
+    "image": "/images/water-bottle.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Organic Cotton T-Shirt",
+    "price": 25.00,
+    "description": "Soft and breathable organic cotton T-shirt available in multiple colors and sizes.",
+    "category": "Apparel",
+    "image": "/images/tshirt.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Desk Lamp with USB Charging Port",
+    "price": 34.99,
+    "description": "Adjustable LED desk lamp with touch control, 3 brightness levels, and built-in USB charger.",
+    "category": "Office Supplies",
+    "image": "/images/desk-lamp.jpg"
+  }
+]

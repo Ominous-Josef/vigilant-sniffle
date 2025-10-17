@@ -9,8 +9,6 @@ export default function RandomUserPage() {
   const [fetchRandomUser, { data: randomUserData, isFetching, isLoading }] =
     useLazyGetRandomUserQuery();
 
-  console.log({ randomUserData });
-
   const randomUser = useMemo(() => {
     if (!randomUserData) return null;
     return randomUserData.results[0];

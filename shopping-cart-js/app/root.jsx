@@ -7,7 +7,10 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import { Toaster } from "sonner";
 import "./app.css";
+import { AppHeader } from "./components/app-header";
+import { ReduxProvider } from "./redux/provider";
 
 export const links = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -41,7 +44,15 @@ export function Layout({ children }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <ReduxProvider>
+      <main>
+        <AppHeader />
+        <Outlet />
+        <Toaster />
+      </main>
+    </ReduxProvider>
+  );
 }
 
 export function ErrorBoundary({ error }) {

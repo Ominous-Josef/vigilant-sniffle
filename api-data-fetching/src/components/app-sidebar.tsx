@@ -6,7 +6,6 @@ import {
   CircleUserIcon,
   HospitalIcon, UsersIcon
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FC } from "react";
@@ -44,15 +43,9 @@ export const AppSidebar: FC = () => {
   return (
     <Sidebar>
       <SidebarHeader className="p-4 border-b">
-        <div className="h-10 w-full overflow-hidden">
-          <Image
-            src={"/logo.png"}
-            alt="App Logo"
-            width={200}
-            height={200}
-            className="size-full object-contain"
-          />
-        </div>
+        <Link href={"/"}>
+          <h1 className="text-2xl font-semibold">DataTrak</h1>
+        </Link>
       </SidebarHeader>
       <SidebarContent>
         <SidebarMenu className="space-y-2 p-4">

@@ -1,13 +1,12 @@
 "use client";
 
 import { ShoppingBasketIcon } from "lucide-react";
-import type { FC } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router";
-import { useAppSelector } from "~/redux/hooks";
 import { GithubIcon } from "./icons/github-icon";
 
-export const AppHeader: FC = () => {
-  const { items: cartItems } = useAppSelector((state) => state.cart);
+export const AppHeader = () => {
+  const { items: cartItems } = useSelector((state) => state.cart);
 
   return (
     <header className="sticky top-0 z-20 bg-white dark:bg-gray-950 w-full border-b border-gray-100">
@@ -33,7 +32,7 @@ export const AppHeader: FC = () => {
 
           <Link
             to={
-              "https://github.com/Ominous-Josef/vigilant-sniffle/blob/main/shopping-cart-ts/README.md"
+              "https://github.com/Ominous-Josef/vigilant-sniffle/blob/main/shopping-cart-js/README.md"
             }
             target="_blank"
             className="inline-block bg-gray-950 text-white dark:bg-white dark:text-gray-950 p-2 rounded-full"
