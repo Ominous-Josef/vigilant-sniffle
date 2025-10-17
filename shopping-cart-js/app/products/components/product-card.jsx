@@ -77,7 +77,7 @@ export const ProductCard = ({ product }) => {
           <p className="text-xs">{product.description}</p>
         </div>
 
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center flex-wrap justify-between gap-4">
           <span>${product.price.toFixed(2)}</span>
 
           {cartItem ? (

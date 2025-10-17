@@ -43,7 +43,7 @@ export default function CartPage() {
   }, [dispatch]);
 
   return (
-    <div className="relative">
+    <div className="container mx-auto relative p-4">
       <div className="relative border border-gray-300 rounded-md p-4 h-fit w-full max-w-xl top-16 space-y-6 mx-auto mt-10">
         <h1 className="font-semibold text-lg border-b border-gray-200">
           Cart Items
