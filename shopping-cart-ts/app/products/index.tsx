@@ -1,12 +1,11 @@
 "use client";
 
-import Products from "app/lib/products.data.json";
-import { useMemo, type FC } from "react";
+import { useMemo } from "react";
 import type { IProduct } from "~/lib/interface";
+import Products from "~/lib/products.data.json";
 import { ProductCard } from "./components/product-card";
 
-export const ProductsPage: FC = () => {
-  console.log(Products);
+export default function ProductsPage() {
   const products = useMemo(() => {
     return Products;
   }, [Products]);
@@ -19,4 +18,4 @@ export const ProductsPage: FC = () => {
       </div>
     </section>
   );
-};
+}

@@ -1,7 +1,6 @@
 "use client";
 
-import { MinusIcon, PlusIcon } from "lucide-react";
-import { useCallback, type FC } from "react";
+import { useCallback } from "react";
 import { Link } from "react-router";
 import { toast } from "sonner";
 import { useAppDispatch, useAppSelector } from "~/redux/hooks";
@@ -10,13 +9,14 @@ import {
 	updateCart,
 	type ICartItem,
 } from "~/redux/slice/cart.slice";
+import { CartItem } from "./components/cart-item";
 
-export const CartPage: FC = () => {
-  const { cart } = useAppSelector((state) => state);
+export default function CartPage() {
+  const { items: cartItems, totalPrice: cartTotalPrice } = useAppSelector(
+    (state) => state.cart
+  );
 
   const dispatch = useAppDispatch();
-
-  const cartItems = cart.items;
 
   const handleUpdateCart = useCallback(
     (cartItem: ICartItem, increment: boolean) => {
@@ -48,40 +48,11 @@ export const CartPage: FC = () => {
           {cartItems.length > 0 ? (
             <div className="divide-y divide-gray-200">
               {cartItems.map((item, index) => (
-                <div key={index} className="flex items-center gap-4 py-3">
-                  <div className="size-16 shrink-0">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="size-full object-contain"
-                    />
-                  </div>
-                  <div className="space-y-4 w-full">
-                    <div>
-                      <p className="font-medium text-sm">{item.name}</p>
-                    </div>
-                    <div className="flex items-center justify-between gap-4">
-                      <p className="text-xs">Price: ${item.price.toFixed(2)}</p>
-                      <div className="inline-flex items-center justify-end rounded-lg bg-transparent border py-1 px-2 border-blue-500">
-                        <span
-                          className="inline-block cursor-pointer select-none rounded-md text-white p-1 bg-blue-500"
-                          onClick={() => handleUpdateCart(item, false)}
-                        >
-                          <MinusIcon size={14} />
-                        </span>
-                        <span className="inline-block w-10 p-1 text-center text-blue-500">
-                          {item.quantity}
-                        </span>
-                        <span
-                          className="inline-block cursor-pointer select-none rounded-md text-white p-1 bg-blue-500"
-                          onClick={() => handleUpdateCart(item, true)}
-                        >
-                          <PlusIcon size={14} />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <CartItem
+                  key={index}
+                  item={item}
+                  handleUpdateCart={handleUpdateCart}
+                />
               ))}
               <div className="space-y-2 mt-6">
                 <div className="flex justify-between">
@@ -96,7 +67,7 @@ export const CartPage: FC = () => {
                 <div className="flex justify-between">
                   <label className="text-xs">Total Price:</label>
                   <p className="text-medium text-sm">
-                    ${cart.totalPrice.toFixed(2)}
+                    ${cartTotalPrice.toFixed(2)}
                   </p>
                 </div>
               </div>
@@ -113,7 +84,10 @@ export const CartPage: FC = () => {
           ) : (
             <div className="space-y-4 text-center py-10">
               <div className="text-lg">Your cart is empty.</div>
-              <Link to="/products" className="border border-blue-500 py-2 px-4 rounded-md text-blue-500 hover:bg-blue-500 hover:text-white transition inline-block">
+              <Link
+                to="/products"
+                className="border border-blue-500 py-2 px-4 rounded-md text-blue-500 hover:bg-blue-500 hover:text-white transition inline-block"
+              >
                 Continue Shopping
               </Link>
             </div>
@@ -122,4 +96,4 @@ export const CartPage: FC = () => {
       </div>
     </div>
   );
-};
+}

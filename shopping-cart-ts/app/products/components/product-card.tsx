@@ -8,14 +8,13 @@ import { useAppDispatch, useAppSelector } from "~/redux/hooks";
 import { updateCart } from "~/redux/slice/cart.slice";
 
 export const ProductCard: FC<{ product: IProduct }> = ({ product }) => {
-  const { cart } = useAppSelector((state) => state);
+  const { items: cartItems } = useAppSelector((state) => state.cart);
   const dispatch = useAppDispatch();
 
   const cartItem = useMemo(() => {
-    const cartItems = cart.items;
     const foundItems = cartItems.filter((val) => val.productId === product.id);
     return foundItems.length > 0 ? foundItems[0] : null;
-  }, [cart, product]);
+  }, [cartItems, product]);
 
   const handleAddToCart = useCallback(() => {
     dispatch(
