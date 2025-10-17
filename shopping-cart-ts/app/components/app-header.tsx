@@ -4,6 +4,7 @@ import { ShoppingBasketIcon } from "lucide-react";
 import type { FC } from "react";
 import { Link } from "react-router";
 import { useAppSelector } from "~/redux/hooks";
+import { GithubIcon } from "./icons/github-icon";
 
 export const AppHeader: FC = () => {
   const { items: cartItems } = useAppSelector((state) => state.cart);
@@ -15,16 +16,31 @@ export const AppHeader: FC = () => {
           ShopTat
         </Link>
 
-        <Link to={"/cart"} className="relative">
-          {cartItems.length > 0 && (
-            <span className="bg-blue-500 absolute -top-1 left-5 inline-flex size-5 animate-bounce items-center justify-center rounded-full text-xs text-white">
-              {cartItems.length}
+        <div className="inline-flex items-center gap-6">
+          <Link
+            to={"/cart"}
+            className="inline-flex items-center justify-center"
+          >
+            {cartItems.length > 0 && (
+              <span className="bg-blue-500 absolute -top-1 left-5 inline-flex size-5 animate-bounce items-center justify-center rounded-full text-xs text-white">
+                {cartItems.length}
+              </span>
+            )}
+            <span className="inline-block cursor-pointer hover:text-blue-500 hover:bg-blue-100 rounded-full p-1">
+              <ShoppingBasketIcon size={18} />
             </span>
-          )}
-          <span className="inline-block cursor-pointer hover:text-blue-500 hover:bg-blue-100 rounded-full p-1">
-            <ShoppingBasketIcon size={18} />
-          </span>
-        </Link>
+          </Link>
+
+          <Link
+            to={
+              "https://github.com/Ominous-Josef/vigilant-sniffle/blob/main/shopping-cart-ts/README.md"
+            }
+            target="_blank"
+            className="inline-block bg-gray-950 text-white dark:bg-white dark:text-gray-950 p-2 rounded-full"
+          >
+            <GithubIcon className="size-4 text-gray-100" />
+          </Link>
+        </div>
       </div>
     </header>
   );
