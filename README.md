@@ -15,7 +15,7 @@ vigilant-sniffle/
 
 ---
 
-## 1. API Data Fetching Showcase
+## 1. [API Data Fetching Showcase](https://github.com/Ominous-Josef/vigilant-sniffle/blob/main/api-data-fetching/README.md)
 
 A Next.js application designed to demonstrate various methods of fetching and displaying data from public APIs. It includes examples of data tables with pagination and sorting, as well as data visualization with charts.
 
@@ -45,7 +45,7 @@ The application will be available at `http://localhost:3000`.
 
 ---
 
-## 2. React Shopping Cart (JavaScript)
+## 2. [React Shopping Cart (JavaScript)](https://github.com/Ominous-Josef/vigilant-sniffle/blob/main/shopping-cart-js/README.md)
 
 A modern shopping cart application built with React and JavaScript. It serves as a practical example of how to build a client-side application featuring product listings, a shopping cart, and state management using Redux.
 
@@ -69,7 +69,7 @@ The application will be available at `http://localhost:5173`.
 
 ---
 
-## 3. React Shopping Cart (TypeScript)
+## 3. [React Shopping Cart (TypeScript)](https://github.com/Ominous-Josef/vigilant-sniffle/blob/main/shopping-cart-ts/README.md)
 
 A type-safe version of the shopping cart application, built with React and TypeScript. This project demonstrates the benefits of using TypeScript for building robust and maintainable applications.
 
